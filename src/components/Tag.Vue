@@ -2,7 +2,7 @@
     <div class="tag-wrap">
         <span>标签：</span>
         <input type="text" id="tag" name="tag" v-model="val" />
-        <button id="apply" v-on:click="add" >添加</button>
+        <button id="apply" class="btn btn-primary" v-on:click="add" >添加</button>
         <ul class="tag-cont clear" v-bind:style="{width: width}">
             <li v-for="item in cont">{{item}}</li>
         </ul>
