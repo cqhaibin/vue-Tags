@@ -1,27 +1,43 @@
 <template>
   <div id="app">  
-    <tag width="300px"></tag>
+    <div class="head">
+
+    </div>
+    <div class="cont">
+      <Message></Message>
+    </div>
   </div>
 </template>
 
 <script>
-import Tag from './components/Tag'
+import Message from './components/Message/index'
 
 export default {
   name: 'app',
   components: {
-    Tag
+    Message
   }
 }
 </script>
 
-<style>
+<style lang="scss" >
+  $head-height: 60px;
+
+html, body, #app, .cont{
+  height: 100%;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.head{
+  height: $head-height;  
+}
+.cont{
+  margin-top: -$head-height;
+  padding-top: $head-height;
 }
 </style>
