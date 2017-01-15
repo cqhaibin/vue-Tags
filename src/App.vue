@@ -4,24 +4,24 @@
 
     </div>
     <div class="cont">
-      <Message></Message>
+      <HChat></HChat>
     </div>
   </div>
 </template>
 
 <script>
-import Message from './components/Message/index'
+import HChat from './components/HChat'
 
 export default {
   name: 'app',
   components: {
-    Message
+    HChat
   }
 }
 </script>
 
 <style lang="scss" >
-  $head-height: 60px;
+  $head-height: 0px;
 
 html, body, #app, .cont{
   height: 100%;
