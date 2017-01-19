@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  collections: [{cont: '001'}, {cont: '002'}]
+  collections: [{cont: '001', type: 'send'}, {cont: '002', type: 'receive'}]
 }
 const mutations = {
   ADD_ITEM (state, item) {

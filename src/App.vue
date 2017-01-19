@@ -1,7 +1,6 @@
 <template>
   <div id="app">  
     <div class="head">
-
     </div>
     <div class="cont">
       <HChat></HChat>

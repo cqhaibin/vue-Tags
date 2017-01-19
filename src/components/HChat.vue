@@ -2,10 +2,10 @@
     <div class="wrap">
         <div class="wrap-main">
             <div class="msg-list">
-                <MsgList></MsgList>
+                <MsgList/>
             </div>
             <div class="msg-input">
-                input
+                <MsgWr/>
             </div>
         </div>
         <div class="wrap-left">
@@ -15,10 +15,12 @@
 </template>
 <script>
   import MsgList from './Message/MsgList'
+  import MsgWr from './Message/MsgWriter'
   export default {
     name: 'HChat',
     components: {
-      MsgList
+      MsgList,
+      MsgWr
     }
   }
 </script>
