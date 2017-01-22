@@ -6,7 +6,6 @@ import App from './App'
 import store from './Store/Message'
 
 Vue.use(ElemUi)
-debugger
 /* eslint-disable no-new */
 new Vue({
   store,

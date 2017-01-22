@@ -13,9 +13,10 @@ export default {
     }
   },
   methods: {
-    add: () => {
+    add: function () {
       debugger
-      console.log(this)
+      let oVal = {cont: this.cont, type: 'send'}
+      this.$store.dispatch('addItem', oVal)
     }
   }
 }
