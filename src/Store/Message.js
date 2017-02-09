@@ -19,7 +19,6 @@ const getters = {
     return state.collections
   }
 }
-debugger
 let obj = new Vuex.Store({
   state,
   getters,

@@ -1,8 +1,9 @@
 // 上下文
 class Context {
   constructor () {
-    this.Msg = [ ]
+    this.msg = []
+    this.room = []
   }
 }
 
-export default Context
+module.exports = Context

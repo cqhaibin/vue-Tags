@@ -5,6 +5,7 @@ import 'element-ui/lib/theme-default/index.css'
 import App from './App'
 import store from './Store/Message'
 
+debugger
 Vue.use(ElemUi)
 /* eslint-disable no-new */
 new Vue({

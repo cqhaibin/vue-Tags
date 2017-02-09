@@ -8,7 +8,6 @@
 <script>
   import { mapGetters } from 'vuex'
   import * as io from 'socket.io-client'
-  debugger
   var socket = io.connect('http://localhost:9001/')
   socket.on('test', function (data) {
     console.log(data)

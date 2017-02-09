@@ -1,15 +1,11 @@
 let socketIo = require('socket.io');
-let express = require('express');
+let express = require('express'); 
+let cxt = require('../src/Server');
 
+console.log(cxt.room.find(1));
 let httpPort = 9001;
 
 let app = express();
-
-app.all("/",function(req,res,next){
-    res.header("Access-Control-Allow-Origin","*");
-    res.header("Access-Control-Allow-Credentials", "true");
-    next();
-});
 
 app.get('/',function(req,res){
     res.send('启动成功：' + httpPort);
