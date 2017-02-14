@@ -5,7 +5,6 @@
     </div>
 </template>
 <script>
-import { Keys } from '../../uitls'
 export default {
   name: 'MsgWriter',
   data () {
@@ -15,9 +14,7 @@ export default {
   },
   methods: {
     add: function () {
-      let key = Keys.SETROOMINFO
       /* 组件 */
-      this.$store.dispatch(key, { type: 'send', cont: '00990' })
     }
   }
 }

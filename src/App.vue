@@ -1,6 +1,7 @@
 <template>
   <div id="app">  
     <div class="head">
+      <span v-if="getRoomInfo != null" >当前房间名称：{{getRoomInfo.name}}</span>
     </div>
     <div class="cont">
       <HChat></HChat>
@@ -9,19 +10,25 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import { Keys } from './uitls'
 import HChat from './components/HChat'
-import { Keys } from '../../uitls'
+
+let currRoom = Keys.GETROOMINFO
 
 export default {
   name: 'app',
   components: {
     HChat
+  },
+  computed: {
+    ...mapGetters([currRoom])
   }
 }
 </script>
 
 <style lang="scss" >
-  $head-height: 0px;
+  $head-height: 40px;
 
 html, body, #app, .cont{
   height: 100%;
@@ -35,6 +42,9 @@ html, body, #app, .cont{
 }
 .head{
   height: $head-height;  
+  padding: 10px;
+  text-align: left;
+  background: -webkit-linear-gradient( left top,#20A0FF,#58B7FF);
 }
 .cont{
   margin-top: -$head-height;
