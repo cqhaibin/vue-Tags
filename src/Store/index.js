@@ -1,7 +1,8 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 
-import * as roomViewCxt from './room/roomViewCxt'
+import RoomViewCxt from './room/roomViewCxt'
+let _rvCxt = new RoomViewCxt()
 
 let opt = {
   state: null,
@@ -9,10 +10,9 @@ let opt = {
   mutations: null,
   actions: null
 }
-roomViewCxt.use(opt)
-
+_rvCxt.use(opt)
 
 Vue.use(Vuex)
 
-let vuex = new Vuex.Store(opt)
-export default vuex
+let store = new Vuex.Store(opt)
+export default store

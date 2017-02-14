@@ -10,6 +10,7 @@
 
 <script>
 import HChat from './components/HChat'
+import { Keys } from '../../uitls'
 
 export default {
   name: 'app',

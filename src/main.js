@@ -3,9 +3,8 @@ import Vue from 'vue'
 import ElemUi from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App'
-import store from './Store/Message'
+import store from './Store'
 
-debugger
 Vue.use(ElemUi)
 /* eslint-disable no-new */
 new Vue({
