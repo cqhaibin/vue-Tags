@@ -16,6 +16,10 @@ class RoomCollection {
   find (roomId) {
     return this.collections.find(x => x.id === roomId)
   }
+  static initRoom (cxt) {
+    let rmCollection = new RoomCollection()
+    cxt.room = rmCollection
+  }
 }
 
 module.exports = RoomCollection
