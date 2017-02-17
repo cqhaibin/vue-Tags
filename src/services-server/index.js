@@ -1,5 +1,7 @@
 let RoomCollection = require('./room/index')
-let cxt = require('./context')
+let Context = require('./context')
+
+let cxt = new Context()
 
 RoomCollection.initRoom(cxt)
 

@@ -6,19 +6,20 @@ import App from './App'
 import store from './Store'
 import { Keys } from './uitls'
 
-import { services } from './services'
-
-services.createIo(function (roomInfo) {
-  let initRoomInfo = Keys.SETROOMINFO
-  Vue.use(ElemUi)
-  /* eslint-disable no-new */
-  new Vue({
-    store,
-    el: '#app',
-    template: '<App/>',
-    components: { App },
-    created: function () {
-      this.$store.dispatch(initRoomInfo, roomInfo)
-    }
-  })
+import { getCxt } from './services-client'
+let initRoomInfo = Keys.SETROOMINFO
+Vue.use(ElemUi)
+/* eslint-disable no-new */
+new Vue({
+  store,
+  el: '#app',
+  template: '<App/>',
+  components: { App },
+  created: function () {
+    let self = this
+    getCxt().createIo(this, function (roomInfo) {
+      self.$store.dispatch(initRoomInfo, roomInfo)
+      getCxt().registerUser()
+    })
+  }
 })
