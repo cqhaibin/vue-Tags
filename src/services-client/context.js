@@ -20,5 +20,8 @@ class Context {
   registerUser () {
     this.socket.emit(this.keys.client.registerUser, this.userId, this.name)
   }
+  newUser (callback) {
+    this.socket.emit(this.keys.emit.newUser, callback)
+  }
 }
 export default Context

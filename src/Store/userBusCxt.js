@@ -6,7 +6,7 @@ class UserBusCxt {
   }
   init () {
     let self = this
-    this.cxt.socket.on(this.cxt.keys.emit.newUser, function (user) {
+    this.cxt.newUser(function (user) {
       self.cxt.vm.$store.dispatch(Keys.ADDUSER, user)
     })
   }

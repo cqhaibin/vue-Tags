@@ -18,7 +18,7 @@ new Vue({
   created: function () {
     let self = this
     getCxt().createIo(this, function (roomInfo) {
-      stores.busCxt.init()
+      stores.busCxt.init() /** 初始化view与service层的交互层(业务层) */
       self.$store.dispatch(initRoomInfo, roomInfo)
       getCxt().registerUser()
     })
