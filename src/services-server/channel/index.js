@@ -10,6 +10,7 @@ class Channel {
   }
   setUser (user) {
     this.user = user
+    this.socket.emit(this.cxt.eventKeys.emit.newUser, user)
   }
   init () {
     let self = this

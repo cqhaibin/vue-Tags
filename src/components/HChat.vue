@@ -9,18 +9,29 @@
             </div>
         </div>
         <div class="wrap-left">
-            left
+            <ul>
+                <li v-for=" user in getUsers" >
+                    {{user.name}}
+                </li>
+            </ul>
         </div>
     </div>
 </template>
 <script>
   import MsgList from './Message/MsgList'
   import MsgWr from './Message/MsgWriter'
+  import { mapGetters } from 'vuex'
+  import { Keys } from '../uitls'
+  let getUsers = Keys.GETUSERS
+
   export default {
     name: 'HChat',
     components: {
       MsgList,
       MsgWr
+    },
+    computed: {
+      ...mapGetters([getUsers])
     }
   }
 </script>
