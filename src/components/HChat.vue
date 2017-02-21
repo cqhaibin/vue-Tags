@@ -9,8 +9,8 @@
             </div>
         </div>
         <div class="wrap-left">
-            <ul>
-                <li v-for=" user in getUsers" >
+            <ul class="list-group" >
+                <li class="list-group-item" v-for=" user in getUsers" >
                     {{user.name}}
                 </li>
             </ul>

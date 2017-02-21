@@ -3,12 +3,14 @@ import Vue from 'vue'
 
 import RoomViewCxt from './room/roomViewCxt'
 import UserViexCxt from './userViewCxt'
+import MsgViewCxt from './msg/msgViewCxt'
 import BusCxt from './indexForBus'
 
 let _busCxt = new BusCxt()
 
 let _rvCxt = new RoomViewCxt()
 let _uvCxt = new UserViexCxt(_busCxt.userCxt)
+let _mvCxt = new MsgViewCxt()
 
 let opt = {
   state: null,
@@ -18,6 +20,7 @@ let opt = {
 }
 _rvCxt.use(opt)
 _uvCxt.use(opt)
+_mvCxt.use(opt)
 
 Vue.use(Vuex)
 

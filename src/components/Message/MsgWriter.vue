@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <el-input type="textarea" :row="2" v-model="cont" ></el-input>
-        <button type="button" class="btn btn-primary" v-on:click="add" >添加</button>
+    <div style="height: 100%; position: relative;" >
+        <el-input type="textarea" :row="8" v-model="cont" ></el-input>
+        <div class="btn-group btn-group-custom" >
+          <button type="button" class="btn btn-primary" v-on:click="add" >添加</button>          
+        </div>
     </div>
 </template>
 <script>
@@ -21,5 +23,13 @@ export default {
 
 </script>
 <style lang="scss" scoped >
-
+  .btn-group-custom{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+  }
+  .btn-group-custom .btn {
+    float: right;
+  }
 </style>
