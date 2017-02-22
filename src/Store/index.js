@@ -27,3 +27,6 @@ Vue.use(Vuex)
 let store = new Vuex.Store(opt)
 export default store
 export const busCxt = _busCxt /** 业务处理上下文 */
+export function getBusCxt () {
+  return _busCxt
+}

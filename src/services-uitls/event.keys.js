@@ -1,9 +1,11 @@
 module.exports = {
   'emit': {
     'sendRooms': 'send.roomCollection', /* 发送房间列表 */
-    'newUser': 'send.newUser' /** 新加入的用户 */
+    'newUser': 'send.newUser', /** 新加入的用户 */
+    'notifyMsg': 'notify.msg' /** 通知消息 */
   },
   'client': {
-    'registerUser': 'send.register.user' /** 注册一个用户 */
+    'registerUser': 'send.register.user', /** 注册一个用户 */
+    'newMsg': 'send.msg' /** 客户端发送的消息 */
   }
 }

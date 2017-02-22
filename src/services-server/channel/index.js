@@ -19,6 +19,9 @@ class Channel {
       console.log(id + '-' + name)
       self.cxt.createUserById(id, name, self.id)
     }) /** 新用户注册 */
+    this.socket.on(this.cxt.eventKeys.client.newMsg, function (msg) {
+      console.log(msg)
+    })
   }
 }
 module.exports = Channel

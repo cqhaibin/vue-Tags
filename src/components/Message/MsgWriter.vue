@@ -7,6 +7,7 @@
     </div>
 </template>
 <script>
+import { getBusCxt } from '../../store'
 export default {
   name: 'MsgWriter',
   data () {
@@ -17,6 +18,8 @@ export default {
   methods: {
     add: function () {
       /* 组件 */
+      let msg = {cont: this.cont}
+      getBusCxt().msgCxt.sendMsg(msg)
     }
   }
 }

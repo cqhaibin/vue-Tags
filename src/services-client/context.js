@@ -23,5 +23,8 @@ class Context {
   newUser (callback) {
     this.socket.on(this.keys.emit.newUser, callback)
   }
+  sendMsg (msg) {
+    this.socket.emit(this.keys.client.newMsg, msg)
+  }
 }
 export default Context
