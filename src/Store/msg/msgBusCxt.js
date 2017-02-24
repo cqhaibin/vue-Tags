@@ -4,7 +4,12 @@ class MsgBusCxt {
     this.cxt = cxt
   }
   init () {
-    console.log('init')
+    let self = this
+    this.cxt.reciveMsg(function (msg) {
+      if (msg.userId !== self.cxt.userId) {
+        self.cxt.vm.$store.dispatch(Keys.ADDMSG, msg)
+      }
+    })
   }
   sendMsg (msg) {
     msg.userId = this.cxt.userId

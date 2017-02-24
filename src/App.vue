@@ -2,9 +2,11 @@
   <div id="app">  
     <div class="head">
       <span v-if="getRoomInfo != null" >当前房间名称：{{getRoomInfo.name}}</span>
+      <button class="btn btn-primary" v-on:click="loginOut" >登出</button>
     </div>
     <div class="cont">
       <HChat></HChat>
+      <Login></Login>
     </div>
   </div>
 </template>
@@ -13,16 +15,24 @@
 import { mapGetters } from 'vuex'
 import { Keys } from './uitls'
 import HChat from './components/HChat'
+import Login from './components/Login'
+import { getBusCxt } from './store'
 
 let currRoom = Keys.GETROOMINFO
 
 export default {
   name: 'app',
   components: {
-    HChat
+    HChat,
+    Login
   },
   computed: {
     ...mapGetters([currRoom])
+  },
+  methods: {
+    loginOut: function () {
+      getBusCxt().userCxt.closeConn()
+    }
   }
 }
 </script>

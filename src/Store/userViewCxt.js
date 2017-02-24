@@ -19,11 +19,17 @@ class UserViewCxt {
     let mutations = {
       [uitls.Keys.ADDUSER]: function (argState, user) {
         argState.users.push(user)
+      },
+      [uitls.Keys.REFUSERS]: function (argState, users) {
+        argState.users = users
       }
     }
     let actions = {
       [uitls.Keys.ADDUSER]: function (dis, user) {
         dis.commit(uitls.Keys.ADDUSER, user)
+      },
+      [uitls.Keys.REFUSERS]: function (dis, users) {
+        dis.commit(uitls.Keys.REFUSERS, users)
       }
     }
     store.state = uitls.merge(store.state, state)

@@ -1,19 +1,20 @@
 <template> 
     <div>
         <ul class="msg-cont">
-            <li v-for="item in list"  v-bind:class="{ 'msg-cont-send' : item.type == 'send' }" >
-                <span class="msg-cont-item" >{{item.cont}}</span>
+            <li v-for="item in getNewMsg"  v-bind:class="{ 'msg-cont-send' : item.type == 'send' }" >
+                <span class="msg-cont-item" >{{item.userName}}: {{item.cont}}</span>
             </li>
         </ul>
     </div>
 </template>
 <script>
+  import { mapGetters } from 'vuex'
+  import { Keys } from '../../uitls'
+  let recKey = Keys.GETNEWMSG
   export default{
     name: 'MsgList',
-    data () {
-      return {
-        list: null
-      }
+    computed: {
+      ...mapGetters([recKey])
     }
   }
 </script>

@@ -10,5 +10,14 @@ class UserBusCxt {
       self.cxt.vm.$store.dispatch(Keys.ADDUSER, user)
     })
   }
+  registerUser (userId, userName) {
+    this.cxt.registerUser(userId, userName)
+  }
+  closeConn () {
+    this.cxt.closeConn()
+  }
+  refUsers (users) {
+    this.cxt.vm.$store.dispatch(Keys.REFUSERS, users)
+  }
 }
 export default UserBusCxt

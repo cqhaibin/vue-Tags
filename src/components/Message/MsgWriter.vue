@@ -30,6 +30,7 @@ export default {
     position: absolute;
     width: 100%;
     bottom: 0;
+    left: 0;
     padding: 10px;
   }
   .btn-group-custom .btn {
