@@ -1,27 +1,11 @@
-# test
+# vue-socket
+>用vue + socket.io实现一个简易聊天室，只实现了用户注册、发送和接受消息。
+## 运行步骤
+- npm install
+>安装程序包相关依赖
+- npm run socketIo
+>运行socketIo消息服务器
+- npm run dev
+>运行客户端   
 
-> test
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![image](http://images.cnblogs.com/cnblogs_com/cqhaibin/938331/o_socket-example.gif)
